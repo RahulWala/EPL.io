@@ -1,0 +1,42 @@
+
+<div class="container" ng-init="EPL.eplData()">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+				<input type="text" class="form-control" value="Matchday" placeholder="Matchday" ng-model="matchSearch" />
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+				<input type="text" class="form-control" placeholder="Team 1" ng-model="team1Search" />			
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+				<input type="text" class="form-control" placeholder="Team 2" ng-model="team2Search" />			
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mt-4">
+				<input type="text" class="form-control" placeholder="Date :- yyyy-mm-dd" ng-model="dateSearch" />			
+			</div>
+	</div>
+	<br>
+	<table class="table table-inverse table-responsive"  style="text-align: center;">
+		<thead>
+			<tr>
+				<th  style="text-align: center;"> Match Day </th>
+				<th  style="text-align: center;"> Date </th>
+				<th  style="text-align: center;"> Team1 </th>
+				<th  style="text-align: center;"> Team2 </th>
+			</tr>
+		</thead>
+		<tbody ng-repeat="data in EPL.datas | filter:matchSearch">
+			<tr ng-repeat="pi in data.matches | filter:team1Search | filter:team2Search | filter:dateSearch" ng-hide="epl1">
+				<td style="color:white;"> <a href="#!first/{{pi.date}}/{{pi.team1.code}}/{{pi.team2.code}}"> {{data.name}} </a></td>
+				<td> {{pi.date}} </td>
+				<td> {{pi.team1.name}}
+				</td>
+
+				<td> {{pi.team2.name}}
+				</td>
+				<td>  </td>
+			</tr>
+		</tbody>		
+	</table>
+
+</div>
+
