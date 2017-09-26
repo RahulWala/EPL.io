@@ -98,7 +98,7 @@ app.config(['$routeProvider',function($routeProvider){
       controllerAs: 'secondCtrl'
     })
      .when('/third',{
-      templateUrl: 'Pages/third.html',
+      templateUrl: 'pages/third.html',
       controller: 'engPreLea2',
       controllerAs: 'EPL2'   
      })
