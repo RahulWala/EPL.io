@@ -170,6 +170,7 @@ a{
 	text-decoration: none;
 }
 
+/*Top button*/
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */

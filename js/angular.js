@@ -1,9 +1,10 @@
 var app = angular.module('football',['ngRoute']);
 
-app.controller('engPreLea',['$http',function($http){
-var main = this;
 
-  
+// First Controller
+app.controller('engPreLea',['$http',function($http){
+
+  var main = this;  
   this.datas = [];
   this.baseUrl = 'https://raw.githubusercontent.com/openfootball/football.json/master';
 
@@ -16,6 +17,7 @@ var main = this;
           main.datas = response.data.rounds;
           console.log(main.datas);
 
+          // Passing date teamCode as a routing path
           for(i in response.data.rounds){
             for(j in response.data.rounds[i].matches){
               main.date= response.data.rounds[i].matches[j];
@@ -58,6 +60,8 @@ this.winTeam = function(){
   }).then(function successCallback(response){
     main.datas = response.data.rounds;
     //console.log(main.datas);
+
+    // for showing individual match info
     for(var i in main.datas){
       //console.log(i);
       for(var j in main.datas[i].matches){
@@ -89,9 +93,9 @@ this.winTeam = function(){
       console.log("Not Found");
   })
 };
-//Trying to show date @Ganapathy
 }]);
 
+// routing path 
 app.config(['$routeProvider',function($routeProvider){
   $routeProvider
     .when('/first/:date/:tCode/:tCode2',{

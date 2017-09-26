@@ -2,6 +2,7 @@ $('.carousel').carousel({
   interval: 2000
 })
 
+// Top button 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

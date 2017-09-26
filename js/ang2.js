@@ -1,4 +1,4 @@
-
+// Second controller
 app.controller('engPreLea2',['$http',function($http){
 var main = this;
 
@@ -87,9 +87,10 @@ this.winTeams = function(){
       console.log("Not Found");
   })
 };
-//Trying to show date @Ganapathy
 }]);
 
+
+// Routing Path
 app.config(['$routeProvider',function($routeProvider){
   $routeProvider
     .when('/firsts/:date/:sCode/:sCode2',{
