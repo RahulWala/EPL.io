@@ -26,7 +26,7 @@
 		</thead>
 		<tbody ng-repeat="data in EPL2.datass | filter:matchSearch">
 			<tr ng-repeat="pi in data.matches | filter:team1Search | filter:team2Search | filter:dateSearch">
-				<td style="color:white;"> <a href="#!firsts/{{pi.date}}/{{pi.team1.code}}/{{pi.team2.code}}"> {{data.name}} </a></td>
+				<td> <a href="#!firsts/{{pi.date}}/{{pi.team1.code}}/{{pi.team2.code}}"> {{data.name}} </a></td>
 				<td> {{pi.date}} </td>
 				<td> {{pi.team1.name}}
 				</td>

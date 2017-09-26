@@ -1,13 +1,20 @@
-
-<h2>Hello</h2>
-
-<div class="row">
-	<div class="w2-col-padding col s12 m6 l6 w2-center">
-		<div class="content-ofEpl">
-			<a href="#">English Premier League 2015-16</a>
+<div class="container" ng-controller="firstController as firstCtrl" ng-init="firstCtrl.winTeam()">
+	<div class="row" style="margin-top: 2em;">
+		<div class="col-md-4 col-xs-12 fonts imag">
+			<img ng-src="css/Images/{{firstCtrl.t1Code | uppercase}}.png" style="height: 13.2vw;width:auto;margin-left: 6.5vw;" class="img-responsive imgs"><br>
+			<h4 style="vertical-align: bottom;text-align: center;" class="mt-4">{{firstCtrl.t1}}</h4>
+		</div>
+		<div class="col-md-4 col-xs-12 fon" style="margin-top: 2em;text-align: center;">
+			<h2>Match Stats</h2><hr>
+			<h3>{{firstCtrl.date}}</h3><br>
+			<h3>Goals</h3><br>
+			<h4><strong>{{firstCtrl.s1}} - {{firstCtrl.s2}}</strong></h4>
+			<br>
+			<h3><strong>"{{firstCtrl.winner}}"</strong></h3>
+		</div>
+		<div class="col-lg-4 col-md-4 col-xs-12 fonts imag">
+			<img ng-src="css/Images/{{firstCtrl.t2Code | uppercase}}.png" style="height: 13.2vw;width: auto;margin-left: 6.5vw;background-size: cover;" class="img-responsive imgs"><br>
+			<h4 style="text-align: center;vertical-align: bottom;" class="mt-4">{{firstCtrl.t2}}</h4>
 		</div>
 	</div>
-	<div class="w2-col-padding col s12 m6 l6">
-		<p>Hii</p>
-	</div>	
 </div>
