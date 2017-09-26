@@ -1,0 +1,38 @@
+<div class="container" ng-controller="secondController as secondCtrl" ng-init="secondCtrl.winTeams()">
+
+	<div class="row mt-2">
+
+			<!-- Team 1  -->
+			<div class="col-lg-4 col-sm-4 col-xs-12 card mb-3">
+				  <img class="card-img-top mt-2" ng-src="css/Images/{{secondCtrl.t1Code | uppercase}}.png" style="height: 22.5em;width: auto;" alt="Card image cap">
+				  <div class="card-block">
+				  	<br>
+				    <h4 class="card-title" style="text-align: center;">{{secondCtrl.t1}}</h4>
+				    
+				  </div>
+				
+			</div>
+
+			<!-- Match Statistics -->
+			<div class="col-lg-4 col-sm-4 col-xs-12 card mb-3" style="text-align: center;">
+				  <div class="card-block">
+				    <h4 class="card-title">Match Statistics</h4><hr>
+				    <p>{{secondCtrl.date}}</p>
+				    <h3>Goals</h3><br>
+				    <h4><strong>{{secondCtrl.s1}} - {{secondCtrl.s2}}</strong></h4>
+			<br>
+			<h3><strong>"{{secondCtrl.winner}}"</strong></h3>
+				  </div>
+			</div>
+
+			<!-- Team 2 -->
+			<div class="col-lg-4 col-sm-4 col-xs-12 card mb-3">
+				<img class="card-img-top mt-2" ng-src="css/Images/{{secondCtrl.t2Code | uppercase}}.png" style="height: 22.5em;width: auto;" alt="Card image cap">
+				  <div class="card-block">
+				  	<br>
+				    <h4 class="card-title" style="text-align: center;">{{secondCtrl.t2}}</h4>
+				    
+				  </div>
+			</div>
+		</div>
+</div>
